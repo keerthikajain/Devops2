@@ -16,5 +16,17 @@ steps{
 bat 'mvn test'
 }
 }
+stage('Run jAR'){
+steps{
+script{
+// run the jar file add capture the output
+def output=bat(script: 'java -jar target/devops2-1.0-SNAPSHOT.jar', returnStdout:true).trim()
+
+//Print the output to jenkins console
+echo "Output from JAR: $(output)"
+
+}
+}
+}
     }
 }
