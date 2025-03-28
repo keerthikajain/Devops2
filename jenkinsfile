@@ -23,7 +23,7 @@ script{
 def output=bat(script: 'java -jar target/devops2-1.0-SNAPSHOT.jar', returnStdout:true).trim()
 
 //Print the output to jenkins console
-echo "Output from JAR: $(output)"
+echo "Output from JAR: ${output}"
 
 }
 }
